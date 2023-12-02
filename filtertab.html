@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Tab and Hide show</title>
+</head>
+<style>
+    .container{
+        display:flex;
+        justify-content: center;
+    }
+
+    .btn-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap:20px;
+    }
+
+    .allthings{
+        background-color:#6200EA;
+        color:white;
+        padding:8px 20px;
+        border-radius:6px;
+        box-shadow: 10px 10px #6200EA;
+        cursor: pointer;
+    }
+    .webdevelopment{
+        background-color:#BBDEFB;
+        color:black;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding:8px 20px;
+        border-radius:6px;
+        box-shadow: 10px 10px #BBDEFB;
+        cursor: pointer;
+    }
+    .Digital{
+        background-color:#00BCD4;
+        color:black;
+        padding:8px 20px;
+        border-radius:6px;
+        box-shadow: 10px 10px #00BCD4;
+        cursor: pointer;
+    }
+
+    .allthings-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+   img{
+    margin-top:50px;
+    width:300px;
+    height:200px;
+    border:1px solid black;
+    padding:6px 6px;
+    margin-left:44px;
+   }
+   .webImage{
+    margin-top:50px;
+    width:300px;
+    height:200px;
+   }
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="btn-container">
+            <p class="allthings">All Things</p>
+            <p class="webdevelopment">Web Development</p>
+            <p class="Digital">Digital Marketing</p>
+        </div>
+    </div>    
+    <div class="allthing-container">
+        <img src="https://res.cloudinary.com/skyrev/image/upload/v1613841299/skyrev/agency/banner1_3D_2x_d5isky.png" alt="">
+        <img src="https://res.cloudinary.com/skyrev/image/upload/v1613841299/skyrev/agency/banner2_3D_2x_vdyoua.png" alt="">
+        <img src="https://res.cloudinary.com/skyrev/image/upload/v1613840771/skyrev/ui/menu_marketing_2x_fxhtru.jpg" alt="">
+        <img src="https://res.cloudinary.com/skyrev/image/upload/v1613840771/skyrev/ui/menu_education_2x_qviwhv.jpg" alt="">
+    </div>
+    <div class="webdevelopments-img">
+        <img src="https://res.cloudinary.com/skyrev/image/upload/v1613840773/skyrev/ui/menu_pos_2x_mwdism.jpg" class="webImage" alt="">
+        <img src="https://res.cloudinary.com/skyrev/image/upload/v1613840773/skyrev/ui/menu_saas2_2x_uml9de.jpg" class="webImage" alt="">
+        <img src="https://res.cloudinary.com/skyrev/image/upload/v1613840771/skyrev/ui/menu_marketing_2x_fxhtru.jpg" class="webImage" alt="">
+        <img src="https://res.cloudinary.com/skyrev/image/upload/v1613840771/skyrev/ui/menu_education_2x_qviwhv.jpg" class="webImage" alt="">
+    </div>
+    <div class="Digitals-img">
+        <img src="https://startp-next.envytheme.com/images/services-details-image/services-details1.png" class="webImage" alt="">
+        <img src="https://startp-next.envytheme.com/images/services-details-image/services-details2.png" class="webImage" alt="">
+        <img src="https://res.cloudinary.com/skyrev/image/upload/v1613840771/skyrev/ui/menu_marketing_2x_fxhtru.jpg" class="webImage" alt="">
+        <img src="https://res.cloudinary.com/skyrev/image/upload/v1613840771/skyrev/ui/menu_education_2x_qviwhv.jpg" class="webImage" alt="">
+    </div>
+</body>
+<script>
+    let allthingsbtn = document.querySelector('.allthings');
+    let webdevelopmentbtn = document.querySelector('.webdevelopment');
+    let digitalbtn = document.querySelector('.Digital');
+    let allthingContainer = document.querySelector('.allthing-container');
+    let webdevimg = document.querySelector('.webdevelopments-img')
+    let digitalImg = document.querySelector('.Digitals-img')
+
+    allthingsbtn.addEventListener('click',function(e){
+        e.preventDefault();
+        if(allthingsbtn == allthingsbtn){
+            allthingContainer.style.display="block";
+            webdevimg.style.display="block";
+            digitalImg.style.display="block"
+        }
+        else{
+            console.log('error');
+        }
+    })
+
+    webdevelopmentbtn.addEventListener("click",function(){
+        // alert("hello");
+        if(webdevelopmentbtn == webdevelopmentbtn){
+            webdevimg.style.display="block";
+            allthingContainer.style.display="none";
+            digitalImg.style.display="none";
+        }
+        else{
+            console.log('error');
+        }
+
+    })
+
+    digitalbtn.addEventListener("click",function(){
+        // alert('hello');
+        if(digitalbtn == digitalbtn){
+            digitalImg.style.display="block";
+            allthingContainer.style.display="none";
+            webdevimg.style.display="none";
+        }else{
+            console.log("'error");
+        }
+    })
+
+</script>
+</html>
